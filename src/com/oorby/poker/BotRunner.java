@@ -47,6 +47,7 @@ public class BotRunner {
 		String devkey = args[1];
 		String host = (args.length >= 2) ? args[2] : "mcp.oorby.com";
 
+		// CHANGE THIS TO USE YOUR OWN BOT IMPLEMENTATION!
 		Bot bot = new SimpleBot(); 
 
 		GameHost gameHost = new RemoteGameHost(botName, devkey, host);

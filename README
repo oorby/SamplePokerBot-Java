@@ -1,3 +1,10 @@
-This is a sample, written in java with no other lib dependencies, for playing poker against the oorby.com API.
+This is a sample, written in java, for playing poker against the oorby.com API.
 
+This code has a dependency on JSON-java, available here:
+https://github.com/douglascrockford/JSON-java
+
+After compiling the source, you can run BotRunner with:
+java com.oorby.poker.BotRunner botName devkey
+
+BotRunner is currently hardcoded to use SimpleBot, which randomly takes an action. You can add your own poker logic by creating your own implementation of the Bot interface and using that in BotRunner.
 
