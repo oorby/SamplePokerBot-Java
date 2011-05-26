@@ -6,7 +6,6 @@ public class BotRunner {
 
 	private GameHost gameHost;
 	private Bot bot;
-	private boolean continuePlaying = true;
 
 
 	public BotRunner(GameHost gameHost, Bot bot) {
@@ -15,15 +14,20 @@ public class BotRunner {
 	}
 
 
-	public void play() {
+	public void play(int numGames) {
 		PlayerAction action = null;
-		while (continuePlaying) {
+		while (numGames > 0) {
 			try {
 				GameEvent event = (action == null) ? gameHost.getNextEvent() : gameHost.takeAction(action); 
 				switch (event.eventType) {
 				case ActionRequired:
 					action = bot.takeAction(event);
 					break;
+
+				case GameComplete:
+					System.out.println("game complete " + numGames);
+					numGames--;
+					// fallthrough
 
 				default:
 					action = null;
@@ -52,6 +56,6 @@ public class BotRunner {
 
 		GameHost gameHost = new RemoteGameHost(botName, devkey, host);
 		BotRunner runner = new BotRunner(gameHost, bot);
-		runner.play();
+		runner.play(1);
 	}
 }
