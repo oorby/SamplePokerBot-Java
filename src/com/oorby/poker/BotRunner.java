@@ -49,7 +49,7 @@ public class BotRunner {
 
 		String botName = args[0];
 		String devkey = args[1];
-		String host = (args.length >= 2) ? args[2] : "mcp.oorby.com";
+		String host = (args.length > 2) ? args[2] : "mcp.oorby.com";
 
 		// CHANGE THIS TO USE YOUR OWN BOT IMPLEMENTATION!
 		Bot bot = new SimpleBot(); 
