@@ -219,7 +219,7 @@ public class RemoteGameHost implements GameHost {
 		for (int i = 0; i < playersJSON.length(); i++) {
 			strs.add(playersJSON.getString(i));
 		}
-		return null;
+		return strs;
 	}
 
 
