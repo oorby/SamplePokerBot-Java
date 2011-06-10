@@ -14,10 +14,12 @@ public class SimpleBot implements Bot {
 
 	@Override
 	public void handleEvent(GameEvent event) {
+		System.out.println("handleEvent " + event);
 	}
 
 	@Override
 	public PlayerAction takeAction(GameEvent event) {
+		System.out.println("take action " + event);
 		List<AvailableAction> availableActions = event.hand.availableActions;
 
 		int randIdx = rand.nextInt(availableActions.size());

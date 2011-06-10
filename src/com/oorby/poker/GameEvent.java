@@ -13,4 +13,9 @@ public class GameEvent {
 	public String eventId;
 	public GameState gameState;
 	public Hand hand;
+
+	public String toString() {
+		return "GameEvent [eventType=" + eventType + ", eventId=" + eventId
+				+ ", gameState=" + gameState + ", hand=" + hand + "]";
+	}
 }

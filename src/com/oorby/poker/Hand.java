@@ -60,4 +60,15 @@ public class Hand {
 
 	public List<Pot> pots;
 	public List<HandResult> results;
+
+	@Override
+	public String toString() {
+		return "Hand [handNumber=" + handNumber + ", players=" + players
+				+ ", handComplete=" + handComplete + ", hole=" + hole
+				+ ", communityCards=" + communityCards + ", availableActions="
+				+ availableActions + ", showdownPlayerHoles="
+				+ showdownPlayerHoles + ", preFlop=" + preFlop + ", flop="
+				+ flop + ", turn=" + turn + ", river=" + river + ", pots="
+				+ pots + ", results=" + results + "]";
+	}
 }

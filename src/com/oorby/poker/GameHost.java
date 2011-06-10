@@ -1,6 +1,5 @@
 package com.oorby.poker;
 
-import java.io.IOException;
 
 public interface GameHost {
 

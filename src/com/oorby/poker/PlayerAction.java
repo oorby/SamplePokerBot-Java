@@ -43,4 +43,9 @@ public class PlayerAction {
 	public PlayerAction(Action action) {
 		this.action = action;
 	}
+
+
+	public String toString() {
+		return "PlayerAction [action=" + action + "]";
+	}
 }

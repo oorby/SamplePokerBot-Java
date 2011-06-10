@@ -57,5 +57,6 @@ public class BotRunner {
 		GameHost gameHost = new RemoteGameHost(botName, devkey, host);
 		BotRunner runner = new BotRunner(gameHost, bot);
 		runner.play(1);
+		System.out.println("Bot exiting");
 	}
 }
