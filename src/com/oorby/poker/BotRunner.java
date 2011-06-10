@@ -34,7 +34,9 @@ public class BotRunner {
 					bot.handleEvent(event);
 				}
 			} catch (Exception ex) {
-				action = null;
+				System.err.println("exception in game loop");
+				ex.printStackTrace();
+				return;
 			}
 		}
 	}
