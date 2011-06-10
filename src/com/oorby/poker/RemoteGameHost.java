@@ -126,6 +126,9 @@ public class RemoteGameHost implements GameHost {
 
 	// these methods are stoopid. Probably worth adding a dependency on a json deserializer to avoid this.
 	private Hand handFromEvent(JSONObject eventJson) throws JSONException {
+		if (!eventJson.has("hand")) {
+			return null;
+		}
 		Hand h = new Hand();
 		JSONObject hand = eventJson.getJSONObject("hand");
 
